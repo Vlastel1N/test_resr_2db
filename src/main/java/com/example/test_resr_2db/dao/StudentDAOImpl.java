@@ -1,5 +1,6 @@
 package com.example.test_resr_2db.dao;
 
+import com.example.test_resr_2db.entity.Student;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -30,7 +31,7 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public Student getStudent(int id) {
-        return entityManager.find(Sudent.class, id);
+        return entityManager.find(Student.class, id);
     }
 
     @Override

@@ -28,9 +28,13 @@ public class MyController {
     public Student saveStudent(@RequestBody Student student) { return studentService.saveStudent(student); }
 
     @PutMapping("/students")
-    public Student updateStudent(@RequestBody Student student){
+    public Student updateStudent(@RequestBody Student student) {
         studentService.saveStudent(student);
         return student;
+    }
+    @DeleteMapping("/students/{id}")
+    public void updateStudent(@PathVariable("id") int id) {
+        studentService.deleteStudent(id);
     }
 
 
